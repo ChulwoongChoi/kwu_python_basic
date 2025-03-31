@@ -21,3 +21,48 @@ print(a[2])  # L만 추출
 # a[2:] → 2부터 끝까지  
 # a[2:3] → 2
 print(a[2:6])  # 2~5번 인덱스까지 추출
+
+# 3. 문자열 함수
+#  3-1. Upper & Lower : 대문자, 소문자 변환
+print(a.upper())
+print(a.lower())
+
+#  3-2. replace() : 문자 치환
+print(a.replace("o", "z"))
+
+#  3-3. len() : 문자열 길이
+print(len(a))
+
+#  3-4. split() : 구분자를 기준으로 문자열 분할
+print(a.split())  # 구분자(기본): 공백
+print(a.split("o"))
+
+#  3-5. strip() : 좌우 공백 제거
+print(a.strip()) # "      I Love YOu          " 
+
+#  3-6. find() and rfind() : 문자열 내부 특정 문자의 인덱스 찾기
+#   - 중복문자의 경우 처음 찾는 문자의 인덱스를 반환
+#   - find() 좌->우
+#   - rfind() 좌<-우
+print(a.find("o"))
+print(a.rfind("o"))
+
+#  3-7. in() : 특정 문자열 포함여부 확인
+#   - 있으면 True, 없으면 False
+#   - 대소문자 구별
+#   - 문자 or 문자열 모두 가능
+print("I" in a)
+print("i" in a)
+print("Love" in a)
+print(" Love" in a)
+
+#  3-8. 문제
+id = "   CherrY1004  "
+print(id.strip().lower())  # "cherry1004"
+
+# "abc@google.com"
+# "abcde@daum.net"
+url = "a@naver.com"
+idx = url.find("@")
+
+print(url[:idx])  # "a", "abc", "abcde"
