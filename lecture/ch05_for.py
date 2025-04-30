@@ -36,3 +36,20 @@ for i in range(1, 10):
 temp = ["A", "B", "C"]
 for i, alpha in enumerate(temp):
     print(i, alpha)
+    
+# break & continue
+#  - for, while 모두 사용 가능
+#  - braek: 반복문을 빠져 나가라
+#  - continue: 즉시 다음 반복으로 넘어가라
+
+for i in range(1, 10): # 1, 2, 3, 4, 5, 6, 7, 8, 9
+    if i % 2 == 0:
+        continue
+    if i == 5:
+        break;
+    print(i)
+    
+# 중첩 for문
+    for i in range(2, 10):
+        for j in range(1, 10):
+            print(f"{i}x{j}={i*j}")   
